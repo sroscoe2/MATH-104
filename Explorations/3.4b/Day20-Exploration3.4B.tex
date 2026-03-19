@@ -1,0 +1,174 @@
+\documentclass{amsart}
+\usepackage{amsmath,amssymb,epsfig,hyperref}
+\usepackage[left=2cm,top=1cm,right=2.5cm,bottom=1cm,nohead,nofoot]{geometry}
+\hypersetup{
+colorlinks=true,
+    linkcolor=blue,    
+    urlcolor=cyan,
+}
+
+\begin{document}
+\pagestyle{empty}
+\thispagestyle{empty}
+
+
+\begin{center}
+\LARGE{Math 104 - Spring 2026 - Exploration 3.4B: Reese's Pieces}\\
+\end{center}
+%\vspace{20pt}
+
+\bigskip
+
+\noindent Reese's Pieces candies come in three colors: orange, yellow, and brown. Suppose you take a random sample of candies and want to estimate the long-run proportion of orange candies. 
+\bigskip
+
+%\noindent Note: The first three questions are just for you to record your initial guesses. The exploration is designed to convey the answers.
+%\bigskip
+
+\begin{Form}
+\begin{enumerate}
+\item Assume that the true long-run proportion of orange candies is $\pi = 0.50$. If you take a random sample of 100 Reese's Pieces and find the sample proportion, is it \emph{guaranteed} to equal $0.50$?
+\ChoiceMenu[combo,name=q1,width=1.5cm,charsize=14pt]{\mbox{}}
+{yes,no} 
+
+\bigskip
+
+\item Assuming $\pi=0.50$, if we calculate a confidence interval based on a sample proportion, is it guaranteed that the interval will contain the value 0.50? \ChoiceMenu[combo,name=q2,width=1.5cm,charsize=14pt]{\mbox{}}
+{yes,no} 
+
+\bigskip
+
+\item Still assuming $\pi=0.50$, if you select another random sample of 100 Reese's Pieces, is it guaranteed that the second sample proportion will be the same as the first? \ChoiceMenu[combo,name=q3a,width=1.5cm,charsize=14pt]{\mbox{}}
+{yes,no} \\
+
+
+
+\noindent Will the confidence interval based on the new sample be the same as the confidence interval based on the first sample? \ChoiceMenu[combo,name=q3b,width=1.5cm,charsize=14pt]{\mbox{}}
+{yes,no} \\
+
+
+\noindent What aspect(s) of the interval would differ, if any?
+\TextField[name=q3c,width=0.4\textwidth]{}
+\bigskip
+\end{enumerate}
+
+\noindent We're going to explore the behavior of confidence intervals from different random samples. Open the {\bf Simulating Confidence Intervals} applet. 
+\begin{itemize}
+\item Make sure that {\bf Proportions}, {\bf Binomial}, and {\bf Wald} are selected from the drop-down menus.
+\item Make sure that $\pi$ is set to be 0.50 and {\bf n} is 100.
+\item Set {\bf Intervals} to 1.
+\item Make sure {\bf Conf level} is set to 95\%.
+\item Press {\bf Sample}.
+\end{itemize}
+\bigskip
+
+\noindent Notice that a horizontal line is added to the graph in the middle. Your line may be red or green. This line represents a confidence interval. The dot in the middle of the line corresponds to the observed sample proportion. The interval is drawn relative to the horizontal axis at the bottom of the figure. The vertical line labeled 0.500 represents the parameter. You can also see the sample proportion plotted in the graph labeled Sample Statistics. 
+\smallskip
+
+\begin{enumerate}
+\setcounter{enumi}{3}
+\item Click on the interval. This reveals the value of the midpoint $\hat{p}$ (at the bottom of the middle graph) and the endpoints of the 95\% confidence interval. Record the following.
+
+\begin{enumerate}
+\item The sample proportion $\hat{p}$. \TextField[name=q4a,width=30pt]{}
+\item The 95\% confidence interval. \TextField[name=q4b,width=75pt]{}
+\item Is the sample proportion within the confidence interval? Why is this unsurprising?\\
+\TextField[name=q4c,width=0.9\textwidth]{}
+\item Is the long-run proportion $\pi = 0.50$ within the confidence interval? \ChoiceMenu[combo,name=q4e,width=1.5cm,charsize=14pt]{\mbox{}}
+{yes,no} 
+
+\end{enumerate}
+\end{enumerate}
+\bigskip
+
+\noindent Notice that 0.50 is either in the interval you recorded or it isn't. If you recorded an interval like $(0.473, 0.537)$, it's not the case that 0.50 is sometimes in that interval and sometimes it isn't; it's in the interval, period. This is true, even when you don't know the long-run proportion $\pi$. Thus it is {\bf incorrect} to say ``There's a 95\% chance that $\pi$ is between 0.473 and 0.537.'' So the big question is:
+\bigskip
+
+\centerline{ \emph{What is happening 95\% of the time?} }
+\bigskip 
+
+Go to next page.....
+
+\newpage
+\noindent Now change {\bf Intervals} from 1 to 99 for a total of 100 random samples from a process where $\pi=0.50$. Press {\bf Sample}. This produces a total of 100 sample proportions (graphed in the Sample Statistics graph) and 100 confidence intervals (at the 95\% confidence level, shown in the middle graph) based on those sample proportions. 
+\bigskip
+
+\begin{enumerate}
+\setcounter{enumi}{4}
+\item Study the graph labeled \textbf{Sample Statistics} closely. At about what number is this graph of sample proportions centered? Is this surprising? Why or why not?\\
+\TextField[name=q5a,width=0.9\textwidth]{}
+
+\item Notice that some of the dots on the \textbf{Sample Statistics} graph are colored red and some are green. Click on a {\bf red} dot. Doing this will reveal the value of the sample proportion and the corresponding 95\% confidence interval. Record the following.
+\begin{enumerate}
+\item The sample proportion.  \TextField[name=q5b,width=30pt]{}
+\item The 95\% confidence interval. \TextField[name=q5c,width=75pt]{}
+%\item Is the sample proportion in the confidence interval?  \TextField[name=q5d,width=30pt]{}
+\item Is the true process probability  ($\pi=0.50$) within the confidence interval?
+\ChoiceMenu[combo,name=q5e,width=1.5cm,charsize=14pt]{\mbox{}}
+{yes,no} \\
+\end{enumerate}
+
+\item Now click on a {\bf green} dot and repeat the previous four items.
+\begin{enumerate}
+\item The sample proportion.  \TextField[name=q5f,width=30pt]{}
+\item The 95\% confidence interval. \TextField[name=q5g,width=75pt]{}
+%\item Is the sample proportion in the confidence interval?  \TextField[name=q5h,width=30pt]{}
+\item Is the true process probability ($\pi=0.50$) within the confidence interval?
+\ChoiceMenu[combo,name=q5i,width=1.5cm,charsize=14pt]{\mbox{}}{yes,no}
+\end{enumerate}
+\end{enumerate}
+\bigskip
+
+\noindent The graph in the middle displays the 100 different 95\% confidence intervals, depicting in green the ones that succeed in capturing the actual value of the long-run proportion and in red the intervals that fail to capture the actual value of $\pi$.
+\bigskip
+
+\begin{enumerate}
+\setcounter{enumi}{7}
+\item In the bottom left corner, the applet maintains a running total for the percentage of the intervals produced so far that contain $\pi=0.50$. What percentage of the 100 random intervals you have generated succeeded in capturing the value of the 0.50 inside the interval? \TextField[name=q5j,width=30pt]{}
+\bigskip
+
+\item Press the {\bf Sample} a few times and watch how, if at all, the percentage reported under Running total changes. Based on your observations, fill in the blanks:
+\bigskip
+
+\noindent \emph{95\% confidence means that if we repeatedly sampled a random process, and used the sample statistic to construct a 95\% confidence interval each time, in the long run, roughly \TextField[name=q5k,width=30pt]{} \% of the intervals constructed would contain the value of the parameter, and the remaining \TextField[name=q5l,width=30pt]{} \% would not.}
+
+%\end{enumerate}
+\bigskip
+
+\item Now we'll consider the effects of changing the confidence level and the sample size.
+\begin{enumerate}
+%\item Before you make this change, first predict what will happen to the resulting confidence intervals:
+%\begin{enumerate}
+%\item How will the widths of the confidence intervals change (if at all)?
+%\item How will the breakdown of green/red intervals change? (What percentage of green intervals do you expect in the long run?)
+%\end{enumerate}
+\item Change {\bf Conflevel} to 99\% and press {\bf Recalculate}. 
+\begin{enumerate}
+\item How do the widths of the intervals change? Why does this make sense?\\
+ \TextField[name=q6a,width=0.8\textwidth]{}
+ 
+\item How does the running total change? Why does this make sense?\\
+ \TextField[name=q6b,width=0.8\textwidth]{}
+
+\end{enumerate}
+%\item Now consider making the sample size four times as large (400 candies) while keeping the confidence level at 99\%. Before doing it, make some predictions:
+%\begin{enumerate}
+%\item How will the widths of the confidence intervals change (if at all)?
+%\item How will the percentage of green intervals change?
+%\end{enumerate}
+\item Now change {\bf n} to 400 and press {\bf Sample}.
+\begin{enumerate}
+\item How do the widths of the intervals change? Why does this make sense?\\
+ \TextField[name=q6c,width=0.8\textwidth]{}
+\item How does the running total change? Why does this make sense?\\
+ \TextField[name=q6d,width=0.8\textwidth]{}
+\end{enumerate}
+\end{enumerate}
+\bigskip
+\end{enumerate}
+
+%\noindent {\bf Minute paper.} Answer the question in the Google Form 
+%\href{https://docs.google.com/forms/d/e/1FAIpQLSckAd4SulsS8eaTOtRkef1MjzJ_e0n-ap_7EyXHYDl2Gf5DoA/viewform?usp=sf_link}{\underline{linked here}}.
+\end{Form}
+
+\end{document}
